@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+		<meta charset="utf-8">
+		<title>Dice Machine</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+	</head>
+	<body style="background-color:cornflowerblue">
+    <div id="d" class="d-grid container-fluid" style="height:100vh">
+
+      <div class="row">
+        <!-- Dice Menu -->
+        <div id="d3" class="col-5 d-grid border-end border-black border-4" style="background-color:brown">
+            
+            <div id="d" class="row align-self-center justify-content-center">
+              <!-- Face Controls -->
+              <div id="d2" class="row fs-5 fw-bold text-white py-3 row-gap-2 justify-content-center border-top border-bottom border-black border-4">
+      
+                <div id="d" class="row align-items-center">
+                  <label for="frontface" class="col col-form-label">Front Face</label>
+                  <div class="col"><input type="text" id="frontface" class="form-control" placeholder="A" ></div>
+                </div>
+      
+                <div id="d" class="row align-items-center">
+                  <label for="sideface" class="col col-form-label">Side Face</label>
+                  <div class="col"><input type="text" id="sideface" class="form-control" placeholder="B" ></div>
+                </div>  
+      
+                <div id="d" class="row align-items-center">
+                  <label for="frontface" class="col col-form-label">Top Face</label>
+                  <div class="col"><input type="text" id="topface" class="form-control" placeholder="C" ></div>
+                </div>
+              </div>
+      
+              <!-- Rotation Controls -->
+              <div id="d2" class="row fs-5 fw-bold text-white mt-4 py-3 row-gap-2 justify-content-center border-top border-bottom border-black border-4">
+      
+                <div id="d" class="row align-items-center">
+                  <label for="xRotInput" class="col-auto col-form-label">X Rotation</label>
+                  <div class="col"><input type="number" id="xRotInput" class="form-control" value="0" min="0" max="359" oninput="this.parentElement.nextElementSibling.firstElementChild.value = this.value"></div>
+                  <div class="col-5"><input type="range" id="xRotRange" class="form-range" value="0" min="0" max="359" step="1" oninput="this.parentElement.previousElementSibling.firstElementChild.value = this.value"></div>
+                </div>
+      
+                <div id="d" class="row align-items-center">
+                  <label for="yRotInput" class="col-auto col-form-label">Y Rotation</label>
+                  <div class="col"><input type="number" id="yRotInput" class="form-control" value="0" min="0" max="359" oninput="this.parentElement.nextElementSibling.firstElementChild.value = this.value"></div>
+                  <div class="col-5"><input type="range" id="yRotRange" class="form-range" value="0" min="0" max="359" step="1" oninput="this.parentElement.previousElementSibling.firstElementChild.value = this.value"></div>
+                </div>  
+      
+                <div id="d" class="row align-items-center">
+                  <label for="zRotInput" class="col-auto col-form-label">Z Rotation</label>
+                  <div class="col"><input type="number" id="zRotInput" class="form-control" value="0" min="0" max="359" oninput="this.parentElement.nextElementSibling.firstElementChild.value = this.value"></div>
+                  <div class="col-5"><input type="range" id="zRotRange" class="form-range" value="0" min="0" max="359" step="1" oninput="this.parentElement.previousElementSibling.firstElementChild.value = this.value"></div>
+                </div>
+              </div>
+      
+              <!-- Image Export Options -->
+              <div id="d2" class="row fs-5 fw-bold text-white mt-4 py-3 row-gap-2 justify-content-center border-top border-bottom border-black border-4">
+                  <div id="d" class="row align-items-center">
+                    <label for="filename" class="col-form-label col-auto">Filename</label>
+                    <div class="col"><input type="text" class="form-control" id="filename" placeholder="Dice"></div>
+                    <button id="downloadimg" class="btn btn-light col-auto " type="button">Download Image</button>
+                  </div>
+              </div>            
+            </div>
+      
+      
+        </div>
+      
+      <!-- Dice Display -->
+        <div id="d" class="col-7 d-grid text-center">
+          <div id="d" class="row align-self-center justify-content-center">
+            <div>
+              <canvas id='canvas'></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script type="module" src="three.js"></script>
+    <script type="module" src="main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+html {
+    box-sizing: content-box;
+}
+
+body { margin: 0; }
+
+canvas {
+    height: 600px;
+    width: 600px;
+}
+
+header {
+    background-color: black;
+    height: 10vh;
+}
+
+#d1 {
+    background-color:red ;
+}
+
+#d2 {
+    background-color:maroon ;
+}
+
+#d3 {
+    background-color:lightskyblue ;
+}
+
+#d4 {
+    background-color:yellow ;
+}
+
+#d5 {
+    background-color:cyan ;
+}
+
+#d6 {
+    background-color:magenta ;
+}
